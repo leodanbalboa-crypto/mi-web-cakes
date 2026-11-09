@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f4ed">
+<title>Christ Cakes | Pasteles hechos con amor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#b58a3a;--gold2:#d9b86e;--ink:#453629;--cream:#fbf8f2;--muted:#8d7b68;--line:#eadfce}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,Arial,sans-serif}
+header{min-height:660px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 22px;overflow:hidden;background:linear-gradient(120deg,rgba(255,252,246,.94),rgba(255,250,239,.72)),radial-gradient(ellipse at 20% 20%,#ead9b8,transparent 45%),radial-gradient(ellipse at 80% 80%,#e6d4b7,transparent 40%)}
+header:before,header:after{content:"";position:absolute;border:1px solid #d6b66f66;border-radius:50%;width:440px;height:440px;pointer-events:none}header:before{left:-240px;top:-180px}header:after{right:-240px;bottom:-260px}
+.hero{position:relative;max-width:760px;z-index:1}.crown{font-size:54px;color:var(--gold);line-height:1}.brand{font-family:"Cormorant Garamond",serif;font-size:clamp(58px,10vw,106px);font-weight:600;line-height:.9;color:#a87925;text-shadow:1px 2px 0 #fff,0 5px 16px #a8792533;margin:20px 0 10px}.brand span{display:block;font-size:.62em;font-style:italic;letter-spacing:3px}.hero-cross{font-size:40px;color:var(--gold);margin:10px}.tagline{font-family:"Cormorant Garamond",serif;font-size:27px;font-style:italic;color:#80623c;margin:16px 0}.verse{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#9c7842}.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{border:1px solid var(--gold);background:var(--gold);color:white;padding:13px 24px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;font-size:11px;font-weight:600;cursor:pointer;transition:.2s}.btn:hover{background:#926b2d}.btn.outline{background:transparent;color:#8d672b}.btn.outline:hover{background:#f1e5cf}
+nav{display:flex;justify-content:center;gap:32px;padding:17px 15px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fffdf9;position:sticky;top:0;z-index:5}nav a{color:var(--ink);text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:2px}nav a:hover{color:var(--gold)}
+section{padding:76px 6vw}.section-head{text-align:center;margin-bottom:38px}.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}h2{font:500 clamp(34px,5vw,52px) "Cormorant Garamond",serif;margin:8px 0;color:#674d2d}.intro{max-width:580px;margin:0 auto;color:var(--muted);font-size:13px;line-height:1.9}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1200px;margin:auto}.product{background:#fff;border:1px solid #eee4d6;box-shadow:0 8px 28px #6b4d1710;overflow:hidden;transition:.25s}.product:hover{transform:translateY(-4px);box-shadow:0 14px 35px #6b4d171c}.photo{height:260px;background:linear-gradient(135deg,#f0e5d4,#fffaf2);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:cover}.placeholder{font:italic 24px "Cormorant Garamond",serif;color:#b29462;text-align:center;padding:20px}.product-info{padding:20px 21px 23px}.product h3{font:600 27px "Cormorant Garamond",serif;margin:0 0 7px;color:#624a2d}.product p{font-size:12px;line-height:1.7;color:#8d7b68;min-height:42px;margin:0 0 14px}.price{font:600 21px "Cormorant Garamond",serif;color:#a87925}.product .btn{display:block;text-align:center;margin-top:15px;width:100%}
+.about{background:#f2eadc;text-align:center}.about-inner{max-width:760px;margin:auto}.about-mark{font-size:42px;color:var(--gold)}.about p{font:italic 22px/1.7 "Cormorant Garamond",serif;color:#735b3c}
+.contact{text-align:center;background:#fffdf9}.phone{font:600 30px "Cormorant Garamond",serif;color:#a87925;letter-spacing:2px;margin:12px}
+footer{background:#4c3b2c;color:#f8f0e3;text-align:center;padding:27px 15px;font-size:10px;letter-spacing:2px}
+.admin-launch{position:fixed;right:18px;bottom:18px;z-index:10;border-radius:50px;box-shadow:0 5px 20px #0002;text-transform:none;letter-spacing:.3px}
+.admin-launch[hidden]{display:none}
+.admin{display:none;background:#fffdf9;border:1px solid var(--line);padding:26px;max-width:1100px;margin:25px auto;border-radius:8px}.admin.open{display:block}.admin h2{font-size:32px}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:11px;color:var(--muted);letter-spacing:1px}.field input,.field textarea{padding:11px;border:1px solid var(--line);background:white;font:13px Montserrat;color:var(--ink);width:100%}.field textarea{min-height:75px;resize:vertical}.drop{border:2px dashed #d7bd8d;padding:20px;text-align:center;color:#94713a;font-size:12px;background:#fbf7ef;cursor:pointer}.drop.drag{background:#f1e4cb;border-color:var(--gold)}.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.admin-list{margin-top:25px;border-top:1px solid var(--line);padding-top:15px}.admin-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #eee5d8;font-size:13px}.admin-row img{width:54px;height:54px;object-fit:cover;background:#eee}.admin-row .grow{flex:1}.small{padding:8px 11px;font-size:10px}.note{font-size:11px;line-height:1.7;color:#8d7b68;margin-top:12px}
+.phone-row{display:flex;gap:10px}.phone-row input{flex:1}
+.modal{display:none;position:fixed;inset:0;background:#2b211dcc;z-index:20;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.dialog{width:min(520px,100%);background:#fffdf9;padding:28px;max-height:90vh;overflow:auto}.dialog h2{font-size:36px}.dialog .field{margin:12px 0}.dialog .btn{width:100%;margin-top:12px}.dialog .btn.small{width:auto;margin-top:0}
+@media(max-width:850px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.photo{height:230px}}
+@media(max-width:560px){header{min-height:570px}nav{gap:17px}nav a{font-size:9px;letter-spacing:1px}section{padding:58px 5vw}.products{grid-template-columns:1fr;max-width:430px}.photo{height:290px}.admin-grid{grid-template-columns:1fr}.brand{font-size:68px}}
+</style>
+</head>
+<body>
+<header id="inicio">
+ <div class="hero">
+  <div class="crown">♛</div>
+  <div class="brand">Christ<span>cakes</span></div>
+  <div class="hero-cross">✝</div>
+  <p class="tagline">Dulzura hecha con amor y dedicación</p>
+  <div class="verse">Romanos 5:8</div>
+  <div class="hero-actions"><a class="btn" href="#productos">Ver pasteles</a><a class="btn outline" href="#contacto">Hacer un pedido</a></div>
+ </div>
+</header>
+<nav><a href="#inicio">Inicio</a><a href="#productos">Pasteles</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+<main>
+<section id="productos">
+ <div class="section-head"><div class="eyebrow">Hechos especialmente para ti</div><h2>Nuestros pasteles</h2><p class="intro">Cada creación está preparada con cariño para convertir tus celebraciones en recuerdos inolvidables. Elige tu favorito y cuéntanos cómo lo imaginas.</p></div>
+ <div class="products" id="productGrid"></div>
+</section>
+<section class="about" id="nosotros"><div class="about-inner"><div class="about-mark">♛</div><div class="eyebrow">Nuestra esencia</div><h2>Un toque dulce para cada ocasión</h2><p>“Pero Dios demuestra su amor por nosotros en esto: en que cuando todavía éramos pecadores, Cristo murió por nosotros.”</p><div class="verse">Romanos 5:8</div></div></section>
+<section class="contact" id="contacto"><div class="eyebrow">Estamos para ayudarte</div><h2>Hagamos algo delicioso</h2><p class="intro">¿Tienes una celebración en mente? Escríbenos y cuéntanos qué pastel te gustaría encargar.</p><div class="phone" id="publicPhone">63764249</div><a class="btn" href="#productos">Elegir un pastel</a></section>
+</main>
+<footer>CHRIST CAKES · HECHO CON AMOR · ROMANOS 5:8</footer>
+
+<!-- El botón de administrar solo aparece si la dirección termina en #admin -->
+<button class="btn admin-launch" id="adminToggle" hidden>⚙ Administrar productos</button>
+<section class="admin" id="adminPanel">
+ <div class="eyebrow">Panel de administración</div><h2>Tu catálogo, a tu manera</h2>
+ <p class="note">Añade productos, cambia fotos arrastrando una imagen al recuadro o elimina artículos. Los cambios de esta demostración se guardan en este navegador.</p>
+ <div class="admin-grid">
+  <div class="field"><label for="pName">NOMBRE DEL PASTEL</label><input id="pName" placeholder="Ej. Pastel de rosas"></div>
+  <div class="field"><label for="pPrice">PRECIO</label><input id="pPrice" placeholder="Ej. 35.00"></div>
+  <div class="field" style="grid-column:1/-1"><label for="pDesc">DESCRIPCIÓN</label><textarea id="pDesc" placeholder="Describe el sabor, tamaño o decoración..."></textarea></div>
+  <div class="field" style="grid-column:1/-1">
+   <label for="dropZone">FOTOGRAFÍA DEL PRODUCTO</label>
+   <div class="drop" id="dropZone" tabindex="0" role="button"><div id="dropPreview"></div></div>
+   <input type="file" id="pImage" accept="image/*" hidden>
+   <div><button class="btn outline small" id="removePhoto" type="button" hidden>Quitar foto</button></div>
+  </div>
+  <div class="field" style="grid-column:1/-1"><label for="phoneInput">TELÉFONO PARA RECIBIR PEDIDOS POR SMS (CON PREFIJO INTERNACIONAL)</label>
+   <div class="phone-row"><input id="phoneInput" inputmode="tel"><button class="btn outline" id="savePhone" type="button">Guardar teléfono</button></div>
+  </div>
+ </div>
+ <div class="admin-actions"><button class="btn" id="saveProduct">Añadir producto</button><button class="btn outline" id="resetForm" type="button">Limpiar formulario</button></div>
+ <div class="admin-list"><strong>Productos publicados</strong><div id="adminList"></div></div>
+ <p class="note">Importante: esta versión guarda productos únicamente en el navegador y dispositivo donde se edita. Para que los cambios aparezcan a todos los visitantes de una web publicada, habrá que conectar un panel de administración con una base de datos o un CMS. El botón SMS abre la aplicación de mensajes del cliente; el cliente confirma y envía el mensaje.</p>
+</section>
+
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle"><div class="dialog">
+ <button class="btn outline small" id="closeModal" style="float:right">Cerrar</button>
+ <div class="eyebrow">Solicitud de pedido</div><h2 id="orderTitle">Tu pastel</h2>
+ <div class="field"><label for="customerName">TU NOMBRE</label><input id="customerName" placeholder="Nombre"></div>
+ <div class="field"><label for="deliveryDate">FECHA DE ENTREGA DESEADA</label><input id="deliveryDate" type="date"></div>
+ <div class="field"><label for="orderDetails">DETALLES DEL PEDIDO</label><textarea id="orderDetails" placeholder="Tamaño, sabor, colores, dedicatoria..."></textarea></div>
+ <button class="btn" id="sendSms">Continuar por SMS</button>
+ <p class="note">Se abrirá la aplicación de mensajes de tu teléfono con la solicitud preparada. Revisa y pulsa Enviar.</p>
+</div></div>
+<script>
+const DEFAULT_PHONE="63764249";
+// OJO: este PIN es visible en el código, solo sirve para que un visitante curioso no entre por error.
+// La seguridad real requiere un servidor (backend).
+const ADMIN_PIN="1234";
+const DROP_TEXT="Arrastra y suelta aquí una fotografía o toca para elegirla";
+
+const defaults=[
+ {id:1,name:"Pastel Royal",price:"Consultar",desc:"Elegancia y delicadeza para tus momentos especiales.",image:""},
+ {id:2,name:"Dulce celebración",price:"Consultar",desc:"Un diseño especial para celebrar en grande.",image:""},
+ {id:3,name:"Rosas de amor",price:"Consultar",desc:"Decoración floral delicada y detalles hechos a mano.",image:""}
+];
+
+const $=id=>document.getElementById(id);
+
+// --- Lectura segura del almacenamiento (si el dato está dañado, usa los valores por defecto) ---
+function loadProducts(){
+ try{
+  const data=JSON.parse(localStorage.getItem("cc_products"));
+  if(Array.isArray(data))return data;
+ }catch(e){}
+ return defaults;
+}
+function loadPhone(){
+ try{return localStorage.getItem("cc_phone")||DEFAULT_PHONE}catch(e){return DEFAULT_PHONE}
+}
+
+let products=loadProducts();
+let phone=loadPhone();
+let chosenImage="",editingId=null,selectedProduct=null,unlocked=false;
+
+// --- Guardado con aviso si falla (por ejemplo, almacenamiento lleno) ---
+function save(){
+ try{
+  localStorage.setItem("cc_products",JSON.stringify(products));
+  localStorage.setItem("cc_phone",phone);
+  return true;
+ }catch(e){
+  alert("No se pudo guardar: el almacenamiento del navegador está lleno o bloqueado. Elimina productos o usa fotos más pequeñas.");
+  return false;
+ }
+}
+
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+// Solo se aceptan imágenes en base64 o enlaces https
+function safeImg(s){
+ s=String(s||"");
+ return (/^data:image\/(png|jpe?g|webp|gif);base64,[A-Za-z0-9+\/=]+$/.test(s)||/^https:\/\//.test(s))?esc(s):"";
+}
+
+function render(){
+ $("productGrid").innerHTML=products.map(p=>{
+  const img=safeImg(p.image);
+  return `<article class="product"><div class="photo">${img?`<img src="${img}" alt="${esc(p.name)}">`:`<div class="placeholder">♛<br>Tu próxima creación<br>de Christ Cakes</div>`}</div><div class="product-info"><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><div class="price">${esc(p.price)}</div><button class="btn" onclick="openOrder(${Number(p.id)})">Solicitar este pastel</button></div></article>`;
+ }).join("");
+ $("adminList").innerHTML=products.map(p=>{
+  const img=safeImg(p.image);
+  return `<div class="admin-row">${img?`<img src="${img}" alt="Foto de ${esc(p.name)}">`:`<div style="width:54px;height:54px;background:#f2eadc;display:grid;place-items:center">♛</div>`}<span class="grow"><b>${esc(p.name)}</b><br><small>${esc(p.price)}</small></span><button class="btn outline small" onclick="editProduct(${Number(p.id)})">Editar</button><button class="btn outline small" onclick="removeProduct(${Number(p.id)})">Eliminar</button></div>`;
+ }).join("")||"<p class='note'>Todavía no hay productos.</p>";
+ $("publicPhone").textContent=phone;
+ $("phoneInput").value=phone;
+}
+
+// --- Vista previa de la foto en el recuadro ---
+function updatePreview(){
+ const img=safeImg(chosenImage);
+ $("dropPreview").innerHTML=img
+  ?`<img src="${img}" alt="Vista previa" style="max-height:130px;max-width:100%;object-fit:contain"><br>Imagen seleccionada · toca para cambiarla`
+  :DROP_TEXT;
+ $("removePhoto").hidden=!chosenImage;
+}
+
+function clearForm(){
+ editingId=null;chosenImage="";
+ $("pName").value="";$("pPrice").value="";$("pDesc").value="";$("pImage").value="";
+ $("saveProduct").textContent="Añadir producto";
+ updatePreview();
+}
+
+// --- Reducir la foto antes de guardarla (máx. 900 px, JPEG) para no llenar el almacenamiento ---
+function resizeImage(file,max=900){
+ return new Promise((resolve,reject)=>{
+  const reader=new FileReader();
+  reader.onerror=reject;
+  reader.onload=()=>{
+   const img=new Image();
+   img.onerror=reject;
+   img.onload=()=>{
+    const scale=Math.min(1,max/Math.max(img.width,img.height));
+    const canvas=document.createElement("canvas");
+    canvas.width=Math.round(img.width*scale);
+    canvas.height=Math.round(img.height*scale);
+    canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
+    resolve(canvas.toDataURL("image/jpeg",0.8));
+   };
+   img.src=reader.result;
+  };
+  reader.readAsDataURL(file);
+ });
+}
+async function readImage(file){
+ if(!file||!file.type.startsWith("image/"))return;
+ try{chosenImage=await resizeImage(file);updatePreview()}
+ catch(e){alert("No se pudo leer esa imagen. Prueba con otra.")}
+}
+
+$("dropZone").onclick=()=>$("pImage").click();
+$("dropZone").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();$("pImage").click()}};
+$("pImage").onchange=e=>readImage(e.target.files[0]);
+["dragover","dragenter"].forEach(ev=>$("dropZone").addEventListener(ev,e=>{e.preventDefault();$("dropZone").classList.add("drag")}));
+["dragleave","drop"].forEach(ev=>$("dropZone").addEventListener(ev,e=>{e.preventDefault();$("dropZone").classList.remove("drag")}));
+$("dropZone").addEventListener("drop",e=>readImage(e.dataTransfer.files[0]));
+$("removePhoto").onclick=()=>{chosenImage="";$("pImage").value="";updatePreview()};
+
+// --- Teléfono: se guarda por separado, sin depender de añadir un producto ---
+function savePhone(){
+ const value=$("phoneInput").value.trim()||DEFAULT_PHONE;
+ phone=value;
+ if(save()){render();return true}
+ return false;
+}
+$("savePhone").onclick=()=>{if(savePhone())alert("Teléfono guardado.")};
+
+$("saveProduct").onclick=()=>{
+ savePhone();
+ const name=$("pName").value.trim();
+ if(!name){alert("Escribe el nombre del pastel.");return}
+ const item={id:editingId||Date.now(),name,price:$("pPrice").value.trim()||"Consultar",desc:$("pDesc").value.trim(),image:chosenImage};
+ const backup=products;
+ products=editingId?products.map(p=>p.id===editingId?item:p):[...products,item];
+ if(!save()){products=backup;return} // si falla, se deshace y el formulario no se borra
+ render();clearForm();
+};
+$("resetForm").onclick=clearForm;
+
+window.editProduct=id=>{
+ const p=products.find(x=>x.id===id);if(!p)return;
+ editingId=id;
+ $("pName").value=p.name;$("pPrice").value=p.price;$("pDesc").value=p.desc;
+ chosenImage=p.image||"";
+ $("saveProduct").textContent="Guardar cambios";
+ updatePreview();
+ $("adminPanel").scrollIntoView({behavior:"smooth"});
+};
+window.removeProduct=id=>{
+ if(!confirm("¿Eliminar este producto?"))return;
+ const backup=products;
+ products=products.filter(p=>p.id!==id);
+ if(!save()){products=backup;return}
+ if(editingId===id)clearForm();
+ render();
+};
+
+// --- Acceso al panel: botón oculto salvo con #admin, y pide PIN ---
+function checkAdminHash(){$("adminToggle").hidden=location.hash!=="#admin"}
+window.addEventListener("hashchange",checkAdminHash);
+checkAdminHash();
+$("adminToggle").onclick=()=>{
+ const panel=$("adminPanel");
+ if(panel.classList.contains("open")){panel.classList.remove("open");return}
+ if(!unlocked){
+  const pin=prompt("PIN de administrador:");
+  if(pin!==ADMIN_PIN){if(pin!==null)alert("PIN incorrecto.");return}
+  unlocked=true;
+ }
+ panel.classList.add("open");
+ panel.scrollIntoView({behavior:"smooth"});
+};
+
+// --- Ventana de pedido ---
+function closeOrder(){$("orderModal").classList.remove("open")}
+window.openOrder=id=>{
+ selectedProduct=products.find(p=>p.id===id);if(!selectedProduct)return;
+ $("orderTitle").textContent=selectedProduct.name;
+ $("orderModal").classList.add("open");
+};
+$("closeModal").onclick=closeOrder;
+$("orderModal").addEventListener("click",e=>{if(e.target===$("orderModal"))closeOrder()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeOrder()});
+
+$("sendSms").onclick=()=>{
+ if(!selectedProduct)return;
+ const msg=`Hola, soy ${$("customerName").value||"un cliente"}. Me interesa solicitar: ${selectedProduct.name}. Precio: ${selectedProduct.price}. Fecha deseada: ${$("deliveryDate").value||"Por confirmar"}. Detalles: ${$("orderDetails").value||"Quisiera más información"}.`;
+ const cleanPhone=phone.replace(/[^\d+]/g,"");
+ const sep=/iPhone|iPad|iPod/.test(navigator.userAgent)?"&":"?"; // iOS usa & y Android usa ?
+ window.location.href=`sms:${cleanPhone}${sep}body=${encodeURIComponent(msg)}`;
+ $("customerName").value="";$("deliveryDate").value="";$("orderDetails").value="";
+ closeOrder();
+};
+
+render();
+updatePreview();
+</script>
+</body></html>
