@@ -1,0 +1,10 @@
+{
+  // ...
+  "d1_databases": [
+    {
+      "binding": "db",
+      "database_id": "17609754-885f-43d0-a3e5-53c04d36fe49"
+    }
+  ],
+  // ...
+}
